@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículum de Programador</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+  <button id="toggleDarkMode" style="position:fixed;top:20px;right:20px;z-index:2000;">
+    🌙 
+  </button>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#datos">Datos Generales</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <header>
+    <img src="./styles/perfil.jpg" alt="Foto de perfil" class="foto-perfil" />
+    <h1>Carlos Escobar - Desarrollador Web</h1>
+    <p>Frontend | Backend | Fullstack</p>
+  </header>
+
+  <main>
+    <section id="datos">
+      <h2>
+        <img src="./styles/persona.png" alt="Icono datos" class="icono" />
+        Datos Generales
+      </h2>
+      <div class="mitad-seccion">
+        <div class="mitad-foto">
+          <img src="./styles/datos.jpg" alt="Foto datos" class="foto-seccion" />
+        </div>
+        <div class="mitad-texto">
+          <p><strong>Nombre:</strong> Eduardo Escobar</p>
+          <p><strong>Email:</strong> Eduardo.escobar3478@gmail.com</p>
+          <p><strong>Ubicación:</strong> Ciudad de Guatemala, Guatemala</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>
+        <img src="./styles/computadora.png" alt="Icono habilidades" class="icono" />
+        Habilidades
+      </h2>
+      <div class="mitad-seccion">
+        <div class="mitad-texto">
+          <ul>
+            <li><strong>Estructura: </strong>HTML, CSS, JavaScript</li>
+            <li><strong>Frontend: </strong>React, Vue</li>
+            <li><strong>Backend: </strong>Node.js, Express</li>
+            <li><strong>Base de datos: </strong>MongoDB, MySQL</li>
+            <li><strong>Repositorios: </strong>Git, GitHub</li>
+          </ul>
+        </div>
+        <div class="mitad-foto">
+          <img src="./styles/hablilidades.png" alt="Foto habilidades" class="foto-seccion" />
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion">
+  <h2>
+    <img src="./styles/formacion.png" alt="Icono formación" class="icono" />
+    Formación
+  </h2>
+  <div class="mitad-seccion">
+    <div class="mitad-foto">
+      <img src="./styles/Formacion.jpg" alt="Foto formación" class="foto-seccion" />
+    </div>
+    <div class="mitad-texto">
+      <ul>
+        <li>Primaria - Escuela de la PNC (2015 - 2018)</li>
+        <li>Educación Básica - Fundación Kinal (2019 - 2022)</li>
+        <li>Educación Diversificado - Fundación Kinal (2023 - 2025)</li>
+        <li>Redes - CCNA (2023)</li>
+        <li>Soporte Técnico - IT Essentials (2023)</li>
+      </ul>
+      <button id="openModal">Ver más en carrusel</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal con carrusel -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="carrusel">
+      <div class="slides">
+        <div class="slide active">
+          <img src="./styles/kinal2.jpg" alt="Diversificado" />
+          <h2>4to Perito</h2>
+          <p>Este fue el primer año de carrera en el cual se introdujeron 
+            los conceptos básicos de programación en java, nos enseñaron a crear
+            aplicaciones simples y a entender la lógica de programación. Asimismo,
+            se nos indujo a recibir los cursos de CCNA e IT Essentials. los cuales
+            fueron fundamentales para nuestra formación en redes y soporte técnico.
+            Por último ese año nos impartieron los fundamentos de bases de datos
+            en MySQL.</p>
+        </div>
+        <div class="slide">
+          <img src="./styles/ccna.jpg" alt="CCNA" />
+          <h2>5to Perito</h2>
+          <p>El segundo año de carrera empezamos con MySQL, donde aprendimos a
+            gestionar bases de datos y a realizar consultas avanzadas. También
+            profundizamos en el desarrollo de aplicaciones web utilizando
+            tecnologías como JavaFX y API REST con springBoot.</p>
+        </div>
+        <div class="slide">
+          <img src="./styles/itessentials.jpg" alt="IT Essentials" />
+          <h2>6to Perito</h2>
+          <p>En este ultimo año de carrera nos enfocamos al desarrollo de aplicaciones
+            web y móviles, utilizando tecnologías como React, Node.js y MongoDB.
+            También aprendimos sobre metodologías ágiles y trabajo en equipo.
+            Así de ese modo, logramos desarrollar proyectos más complejos y
+            colaborativos.
+        </p>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+
+    <section id="contacto">
+      <h2>
+        <img src="./styles/contacto.png" alt="Icono contacto" class="icono" />
+        Contacto
+      </h2>
+      <p>¿Te interesa contactarme? Haz clic en el botón para ver mis datos.</p>
+      <button onclick="mostrarContacto()">Mostrar Contacto</button>
+      <div class="contacto-info" id="contactoInfo">
+        <p><strong>Email:</strong> juanperez@email.com</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/juanperez" target="_blank">linkedin.com/in/juanperez</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/juanperez" target="_blank">github.com/juanperez</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="./scripts/scripts.js"></script>
+  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/darkmode.js"></script>
+</body>
+</html>
